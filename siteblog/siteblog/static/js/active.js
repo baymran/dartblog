@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    $('.menu a').each(function (){
+        let loc = window.location
+        let location = loc.protocol + '//' + loc.host + loc.pathname;
+        let link = this.href
+        if (location == link){
+            $(this).parent().addClass('active');
+        }
+    })
+
     var filterFns = {
         numberGreaterThan50: function () {
             var number = $(this).find('.number').text();
