@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }} :: {{ block.super }}{% endblock %}
+{% block content %}
+    <section class="single-blog-area">
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-12">
+                    <div class="border-top">
+                        <div class="col-md-8">
+                        <div class="blog-area">
+                            <div class="blog-area-part">
+                                <h2>{{ post.title }}</h2>
+                                {% if post.photo %}
+                                    <img src="{{ post.photo.url }}" alt="{{ post.title }}">
+                                {% else %}
+                                    <img src="https://picsum.photos/id/2/228/142" alt="{{ post.title }}">
+                                {% endif %}
+                                <p>{{ post.content|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="tags">
+                            <h2 class="sidebar-title">Tags</h2>
+                            <p><a href="#">Adventure</a></p>
+                            <p><a href="#">Animals</a></p>
+                            <p><a href="#">Asia</a></p>
+                            <p><a href="#">Beauty</a></p>
+                            <p><a href="#">Canada</a></p>
+                            <p><a href="#">Celebration</a></p>
+                            <p><a href="#">City</a></p>
+                            <p><a href="#">Coffee</a></p>
+                            <p><a href="#">Constructions</a></p>
+                            <p><a href="#">Europe</a></p>
+                            <p><a href="#">Adventure</a></p>
+                            <p><a href="#">Animals</a></p>
+                            <p><a href="#">Asia</a></p>
+                            <p><a href="#">Beauty</a></p>
+                            <p><a href="#">Canada</a></p>
+                            <p><a href="#">Celebration</a></p>
+                            <p><a href="#">City</a></p>
+                            <p><a href="#">Coffee</a></p>
+                            <p><a href="#">Constructions</a></p>
+                            <p><a href="#">Europe</a></p>
+                            <p><a href="#">Adventure</a></p>
+                            <p><a href="#">Animals</a></p>
+                            <p><a href="#">Asia</a></p>
+                            <p><a href="#">Beauty</a></p>
+                            <p><a href="#">Canada</a></p>
+                        </div>
+
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

@@ -35,8 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'ckeditor',
+    'mptt',
 
     'blog.apps.BlogConfig',
+    'trees.apps.TreesConfig',
 ]
 
 MIDDLEWARE = [
@@ -209,3 +211,6 @@ CACHES = {
     }
 }
 
+# ---=== MPTT ===---
+
+MPTT_ADMIN_LEVEL_INDENT = 30
